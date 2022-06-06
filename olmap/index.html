@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Map</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <!-- иконки панель  -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- иконки карта -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.1.1/css/ol.css" type="text/css">
+    <!-- стили панель -->
+    <link rel="stylesheet" href="./sidebar/sidebar.css">
+    <!-- стили карта  -->
+    <link rel="stylesheet" href="./style.css">
+    
+    <!-- стили переключатель  -->
+    <link rel="stylesheet" href="./layerswitcher/layerswitcher.css" />
+
+</head>
+
+<body>
+    <div id="sidebar" class="sidebar collapsed">
+        <!-- панель -->
+        <div class="sidebar-tabs">
+            <ul role="tablist">
+                <li><a href="#layersmenu" role="tab"><i class="fa fa-bars"></i></a></li>
+                <li><a href="#profile" role="tab"><i class="fa fa-user"></i></a></li>
+            </ul>
+        </div>
+
+        <!-- вкладки -->
+        <div class="sidebar-content">
+            <div class="sidebar-pane" id="layersmenu">
+                <h1 class="sidebar-header">Слои
+                    <span class="sidebar-close">
+                        <i class="fa fa-caret-left"></i>
+                    </span>
+                </h1>
+                <div id="layers" class="layer-switcher"></div>
+            </div>
+
+            <div class="sidebar-pane" id="profile">
+                <h1 class="sidebar-header">Профиль<span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="map" class="sidebar-map"></div>
+
+    <!-- подключение ol -->
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.14.1/build/ol.js"></script>
+    <script src="./layerswitcher/layerswitcher.js"></script>
+    <script src="./sidebar/sidebar.js"></script>
+    <script src="./main.js" type="module"></script>
+
+</body>
+</html>
